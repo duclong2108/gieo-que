@@ -1,0 +1,206 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 0.16rem;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding);
+  @include mobile {
+    font-size: calc(100vw / 4.28);
+  }
+
+  @include desktop {
+    font-size: 100px;
+  }
+  
+  @include tablet {
+    font-size: calc(100vw / 19.2);
+  }
+
+}
+
+.wrapper {
+  max-width: 12.4rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  margin: 0 auto;
+  @include mobile {
+    padding-left: 0.16rem;
+    padding-right: 0.16rem;
+  }
+}
+
+@include desktop {
+  .sm {
+    display: none !important;
+  }
+}
+
+@include mobile {
+  .md {
+    display: none !important;
+  }
+}
+
+/* Hide scrollbar for Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+span {
+  display: inline-flex;
+}
+
+input {
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

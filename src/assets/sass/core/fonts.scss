@@ -1,0 +1,22 @@
+$font-path: '../../fonts/';
+
+@font-face {
+  font-family: 'iCiel-Altus';
+  src: url($font-path + 'iCiel-Altus.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'iCielBCCubano';
+  src: url($font-path + 'iCielBCCubano.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ong-Do-Gia';
+  src: url($font-path + 'Ong-Do-Gia.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}

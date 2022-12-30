@@ -1,0 +1,208 @@
+body {
+  color: #000;
+  font-family: "iCiel-Altus", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+html {
+}
+
+.container {
+  height: 100vh;
+  min-height: 10.8rem;
+  background-image: url("/assets/image/flower_img.svg"), url("/assets/image/main_bg.jpg");
+  background-position: top left, center;
+  background-size: 5.01rem auto, cover;
+  background-repeat: no-repeat, no-repeat;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 0.5rem;
+  line-height: 0.6rem;
+  color: #900404;
+  position: relative;
+  @include mobile {
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+    min-height: 9.26rem;
+    background-size: 1.51rem auto, cover;
+    background-image: url("/assets/image/sp/flower_img.svg"), url("/assets/image/sp/main_bg.jpg");
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(144, 4, 4, 0.5);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  &.background-blur {
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.font-cubano {
+  font-family: "iCielBCCubano", sans-serif;
+}
+
+.font-ong-do {
+  font-family: "Ong-Do-Gia", sans-serif;
+}
+
+.wrapper {
+}
+
+.shake-animation {
+  -webkit-animation-name: shakeX;
+  animation-name: shakeX;
+}
+
+@-webkit-keyframes shakeX {
+  0%,
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  5%,
+  15%,
+  25%,
+  35%,
+  45% {
+    -webkit-transform: translate3d(-0.1rem, 0, 0);
+    transform: translate3d(-0.1rem, 0, 0);
+  }
+  10%,
+  20%,
+  30%,
+  40% {
+    -webkit-transform: translate3d(0.1rem, 0, 0);
+    transform: translate3d(0.1rem, 0, 0);
+  }
+  50% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes shakeX {
+  0%,
+  to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  5%,
+  15%,
+  25%,
+  35%,
+  45% {
+    -webkit-transform: translate3d(-0.1rem, 0, 0);
+    transform: translate3d(-0.1rem, 0, 0);
+  }
+  10%,
+  20%,
+  30%,
+  40% {
+    -webkit-transform: translate3d(0.1rem, 0, 0);
+    transform: translate3d(0.1rem, 0, 0);
+  }
+  50% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes voucherMove {
+  0% {
+    width: 1.98rem;
+    left: 3.75rem;
+    top: 0.94rem;
+  }
+
+  11% {
+    width: 1.98rem;
+    left: 3.75rem;
+    top: -0.1rem;
+  }
+
+  22% {
+    width: 1.98rem;
+    left: 3.75rem;
+    top: -0.2rem;
+  }
+
+  77% {
+    left: 10.28rem;
+    top: 2.23rem;
+    width: 1.98rem;
+  }
+
+  100% {
+    left: 10.28rem;
+    top: 2.23rem;
+    width: 4.56rem;
+  }
+}
+
+@keyframes animationFlower {
+  0% {
+    opacity: 0;
+    top: -10%;
+    transform: rotate(0deg);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    transform: rotate(45deg);
+  }
+
+  40% {
+    transform: rotate(90deg);
+  }
+
+  60% {
+    transform: rotate(135deg);
+  }
+
+  80% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    top: 110%;
+    transform: rotate(225deg);
+  }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-0.2rem);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

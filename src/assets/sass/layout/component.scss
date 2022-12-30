@@ -1,0 +1,507 @@
+// MAIN SECTION
+
+.section-main {
+  display: flex;
+  min-height: 100%;
+  padding-top: 0.5rem;
+
+  img {
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 13.92rem;
+    padding: 0 0.2rem;
+    position: relative;
+    min-height: 100%;
+  }
+
+  .main-image {
+    width: 3.31rem;
+    margin: -0.25rem auto -0.7rem;
+    position: absolute;
+    left: 50%;
+    top: 62.3%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    @include mobile {
+      // width: 1.86rem;
+      // top: auto;
+      // bottom: 0;
+      width: 2.21rem;
+      top: auto;
+      bottom: 1.15rem;
+      transform: translateX(-50%);
+    }
+    &.start-animation {
+      img {
+        animation: shakeX 2s linear infinite;
+        animation-delay: 1s;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    &.is-left {
+      width: 3.94rem;
+      left: 1.11rem;
+      top: 61.9%;
+      transform: translate(0, -50%);
+      @include mobile {
+        width: 1.68rem;
+        top: auto;
+        bottom: 0.5rem;
+        left: 49%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .main-title {
+    width: 11.06rem;
+    @include mobile {
+      width: 3.25rem;
+      display: block;
+      margin: 0.15rem auto 0;
+    }
+  }
+
+  .main-sub-title {
+    width: 4.12rem;
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  @include desktop {
+    height: 100%;
+    width: 7.74rem;
+    padding-top: 0.75rem;
+    margin-right: -0.45rem;
+  }
+  @include mobile {
+    width: 3.6rem;
+    height: 4.7rem;
+    margin-right: auto;
+  }
+}
+
+.content-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 7.74rem;
+  height: 9.55rem;
+  padding: 0 0.5rem 0.5rem;
+  background: url("/assets/image/content_bg.png") center/contain no-repeat;
+  @include mobile {
+    width: 3.6rem;
+    height: 4.7rem;
+    padding: 0;
+    background-image: url("/assets/image/sp/content_bg.png");
+  }
+}
+
+.content-title {
+  font-size: 0.5rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #900404;
+  max-width: 80%;
+  margin: 0 auto;
+  @include mobile {
+    font-size: 0.24rem;
+    line-height: 0.4rem;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.content-input {
+  text-align: center;
+  margin-top: 0.4rem;
+  @include mobile {
+    margin-top: 0.45rem;
+  }
+  input {
+    width: 4.1rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.02rem dashed #000000;
+    margin: 0 auto;
+    font-size: 0.5rem;
+    line-height: 0.6rem;
+    @include mobile {
+      width: 2.18rem;
+      border-width: 1px;
+      font-size: 0.3rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+.content-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.56rem;
+  height: 0.8rem;
+  background: url("/assets/image/btn_bg.jpg") center/cover no-repeat;
+  border: 0.01rem solid #f4bf41;
+  border-radius: 0.2rem;
+  font-size: 0.5rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #f4bf41;
+  margin: 0.5rem auto;
+  @include mobile {
+    width: 1.4rem;
+    height: 0.48rem;
+    font-size: 0.22rem;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+    margin-top: 0.9rem;
+  }
+}
+
+.content-list {
+  list-style: upper-alpha;
+  font-size: 0.45rem;
+  line-height: 0.48rem;
+  color: #900404;
+  margin: 0.18rem 0 0 10%;
+  padding: 0.5rem 0.2rem 0 16%;
+  height: 4.6rem;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  width: 83%;
+  &:hover {
+    scrollbar-width: 1px;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(144, 4, 4, 0.5);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  @include mobile {
+    margin: 0.18rem 0 0 10%;
+    padding: 0.2rem 0.2rem 0 15%;
+    height: 2rem;
+    width: 81.2%;
+  }
+  li {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    @include mobile {
+      margin-bottom: 0.26rem;
+    }
+    &:hover {
+      text-shadow: 0.02rem 0 #ffd600, -0.02rem 0 #ffd600, 0 0.02rem #ffd600, 0 -0.02rem #ffd600, 0.01rem 0.01rem #ffd600,
+        -0.01rem -0.01rem #ffd600, 0.01rem -0.01rem #ffd600, -0.01rem 0.01rem #ffd600;
+      &::after {
+        background-image: url("/assets/image/text_bg_active.png");
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 5.38rem;
+      height: calc(100% + 0.18rem);
+      background: url("/assets/image/text_bg.png") center/contain repeat-y;
+      position: absolute;
+      left: -1rem;
+      top: -0.09rem;
+      z-index: -1;
+      transition: all 0.3s ease;
+      @include mobile {
+        width: 2.84rem;
+        height: calc(100% + 0.1rem);
+        left: -0.57rem;
+        top: -0.06rem;
+      }
+    }
+    @include mobile {
+      font-size: 0.22rem;
+      line-height: 0.25rem;
+    }
+  }
+}
+
+.hexagram-block {
+  width: 15.7rem;
+  height: 9.5rem;
+  padding-top: 1.06rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: url("/assets/image/hexagram_bg.png") center/contain no-repeat;
+  z-index: 22;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease;
+  @include mobile {
+    width: 3.82rem;
+    height: 7.89rem;
+    padding-top: 0.66rem;
+    background-image: url("/assets/image/sp/hexagram_bg.png");
+  }
+  &.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.hexagram-title {
+  width: 11.56rem;
+  height: 1.21rem;
+  font-size: 0.8rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #9d3d08;
+  background: url("/assets/image/hexagram_title_bg.png") center/contain no-repeat;
+  margin: 0 auto;
+  padding-top: 0.1rem;
+  padding-left: 0.45rem;
+  transform: translateX(0.25rem);
+  @include mobile {
+    width: 2.86rem;
+    height: 0.3rem;
+    transform: none;
+    font-size: 0.1983rem;
+    line-height: 0.15rem;
+    padding: 0.03rem 0 0 0.15rem;
+  }
+}
+
+.hexagram-text {
+  max-width: 10.74rem;
+  margin: 0.2rem auto 0.55rem;
+  text-align: justify;
+  height: 2.5rem;
+  overflow: auto;
+  @include mobile {
+    font-size: 0.22rem;
+    line-height: 0.3rem;
+    max-width: 2.88rem;
+    margin-top: 0.24rem;
+  }
+}
+
+.hexagram-btn {
+  width: 4.12rem;
+  margin: 0 auto;
+  cursor: pointer;
+  animation: float 2s linear infinite;
+  @include mobile {
+    width: 2.98rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0.5rem;
+    img {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.reward-block {
+  display: flex;
+  padding-left: 2.2rem;
+  padding-top: 0.32rem;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    .reward-voucher {
+      @include desktop {
+        animation: voucherMove 3s linear;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.reward-image {
+  width: 3.04rem;
+  @include mobile {
+    display: none;
+  }
+}
+
+.reward-image-top {
+  width: 3.04rem;
+  height: 6.75rem;
+  position: absolute;
+  background: url("/assets/image/reward_img_top.png") center/contain no-repeat;
+  left: 2.2rem;
+  top: 0.32rem;
+  z-index: 55;
+  @include mobile {
+    display: none;
+  }
+}
+
+.reward-voucher {
+  width: 1.98rem;
+  position: absolute;
+  left: 3.75rem;
+  top: 0.94rem;
+  transform: translate(-50%, -50%);
+  @include mobile {
+    width: 2.85rem;
+    left: 51%;
+    top: 1.38rem;
+  }
+}
+
+.reward-content {
+  flex: 1;
+  padding: 3.84rem 1.65rem;
+  @include mobile {
+    padding: 0;
+    max-width: 3.14rem;
+    padding-left: 0.1rem;
+    margin: 2.62rem auto 0;
+  }
+}
+
+.reward-list {
+  font-size: 0.28rem;
+  line-height: 0.32rem;
+  letter-spacing: 0.004em;
+  color: #000000;
+  @include mobile {
+    font-size: 0.15rem;
+    line-height: 0.25rem;
+  }
+}
+
+.container-flower,
+.flower-group {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  pointer-events: none;
+  transform: rotate(-5deg);
+}
+
+.icon-flower {
+  width: 0.91rem;
+  height: 0.91rem;
+  background: url("/assets/image/ico_flower_02.svg") center/contain no-repeat;
+  position: absolute;
+  &.is-small {
+    width: 0.4rem;
+    height: 0.4rem;
+    background-image: url("/assets/image/ico_flower_01.svg");
+  }
+
+  &:nth-child(1) {
+    animation: animationFlower 15s linear infinite;
+    left: 10%;
+  }
+  &:nth-child(2) {
+    animation: animationFlower 28s linear infinite;
+    left: 30%;
+  }
+  &:nth-child(3) {
+    animation: animationFlower 30s linear infinite;
+    left: 50%;
+    width: 0.4rem;
+    height: 0.4rem;
+  }
+  &:nth-child(4) {
+    animation: animationFlower 20s linear infinite;
+    left: 70%;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  &:nth-child(5) {
+    animation: animationFlower 25s linear infinite;
+    left: 90%;
+    width: 0.55rem;
+    height: 0.55rem;
+  }
+  &:nth-child(6) {
+    animation: animationFlower 10s linear infinite;
+    left: 0%;
+  }
+  &:nth-child(7) {
+    animation: animationFlower 9s linear infinite;
+    left: 45%;
+  }
+  &:nth-child(8) {
+    animation: animationFlower 58s linear infinite;
+    left: 65%;
+    width: 0.3rem;
+    height: 0.3rem;
+  }
+  &:nth-child(9) {
+    animation: animationFlower 42s linear infinite;
+    left: 75%;
+  }
+  &:nth-child(10) {
+    animation: animationFlower 37s linear infinite;
+    left: 95%;
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+}
+
+.reward-warning {
+  font-size: 0.4rem;
+  line-height: 110.3%;
+  letter-spacing: -0.024em;
+  text-transform: uppercase;
+  color: #900404;
+  text-align: right;
+  margin-top: 0.34rem;
+  @include mobile {
+    font-size: 0.2rem;
+    line-height: 110.3%;
+    text-align: center;
+  }
+  span {
+    display: block;
+    text-transform: none;
+    font-size: 0.28rem;
+    line-height: 0.32rem;
+    letter-spacing: 0.004em;
+    color: #d51812;
+    @include mobile {
+      font-size: 0.16rem;
+      line-height: 0.32rem;
+    }
+  }
+}
